@@ -64,73 +64,38 @@ IndicBridge addresses this challenge with a transparent **11-stage pipeline** in
 
 - **Smoothed Inverse Document Frequency (IDF):**
 
-  $$
-  \mathrm{idf}(t) =
-  \ln\left(\frac{N+1}{\mathrm{df}(t)+1}\right) + 1.0
-  $$
+  IDF(t) = ln((N + 1) / (df(t) + 1)) + 1.0
 
 - **Sublinear Term Frequency (TF):**
 
-  $$
-  \mathrm{tf}(t,d) =
-  1 + \ln(\mathrm{count}(t,d))
-  \quad \text{for count} > 0
-  $$
+  TF(t, d) = 1 + ln(count(t, d)), for count > 0
 
 - **Euclidean L2 Normalization:**
 
-  $$
-  \|\vec{d}\|_2 =
-  \sqrt{
-  \sum_{t \in d}
-  \left(
-  \mathrm{tf}(t,d)\cdot\mathrm{idf}(t)
-  \right)^2
-  }
-  $$
+  ‖d‖₂ = √[Σₜ∈d (TF(t, d) × IDF(t))²]
 
   Document weights are normalized as:
 
-  $$
-  \vec{w}_d(t) =
-  \frac{
-  \mathrm{tf}(t,d)\cdot\mathrm{idf}(t)
-  }{
-  \|\vec{d}\|_2
-  }
-  $$
+  w_d(t) = (TF(t, d) × IDF(t)) / ‖d‖₂
 
 - **Cosine Similarity Dot-Product:**
 
-  $$
-  \mathrm{Cosine}(q,d) =
-  \sum_{t \in q \cap d}
-  \vec{w}_q(t)\cdot\vec{w}_d(t)
-  $$
+  Cosine(q, d) = Σₜ∈q∩d w_q(t) × w_d(t)
 
 - **Convex Score Fusion:**
 
-  $$
-  \mathrm{Score}_{\mathrm{final}}(q,d)
-  =
-  \alpha\cdot\mathrm{Cosine}(q,d)
-  +
-  \beta\cdot\mathrm{Translit}(q,d)
-  +
-  \gamma\cdot\mathrm{Phonetic}(q,d)
-  +
-  \delta\cdot\mathrm{Exact}(q,d)
-  $$
+  Score_final(q, d) = α × Cosine(q, d)
+  + β × Translit(q, d)
+  + γ × Phonetic(q, d)
+  + δ × Exact(q, d)
 
-  **Default Weights:**  
-  $\alpha = 0.70$, $\beta = 0.15$, $\gamma = 0.10$, $\delta = 0.05$
+  **Default Weights:**
+
+  α = 0.70, β = 0.15, γ = 0.10, δ = 0.05
 
   The weights are strictly normalized to:
 
-  $$
-  \alpha + \beta + \gamma + \delta = 1.00
-  $$
-
+  α + β + γ + δ = 1.00
 ---
 
 ## 3. Dataset & Provenance
