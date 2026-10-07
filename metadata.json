@@ -1,0 +1,6 @@
+{
+  "name": "INDICBRIDGE: Explainable Multilingual Search",
+  "description": "Explainable multilingual and cross-variant information retrieval system for Hindi, Hinglish, and English with classical TF-IDF, transliteration, adapted phonetic matching, and score fusion.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

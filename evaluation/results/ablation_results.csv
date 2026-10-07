@@ -1,0 +1,6 @@
+Configuration,Description,P@5,P@10,R@5,R@10,F1@5,MRR,MAP
+1. TF-IDF Only (Baseline),Exact token TF-IDF matching without linguistic preprocessing,0.6111,0.496,0.7222,0.7472,0.6284,0.9792,0.7124
+2. TF-IDF + Normalization,Unicode + nukta folding + romanized normalization + stemming,0.6292,0.5643,0.75,0.8028,0.6641,1.0,0.7662
+3. TF-IDF + Transliteration,Adds bidirectional Devanagari <-> Latin transliteration expansion,0.6056,0.5004,0.7583,0.8028,0.6521,1.0,0.7726
+4. TF-IDF + Phonetic Matching,Adds adapted IndicSoundex and fuzzy string distance scoring,0.6375,0.5643,0.7583,0.8028,0.6724,1.0,0.7711
+5. Full IndicBridge,All pipeline components with multi-signal score fusion,0.6056,0.5087,0.7583,0.8195,0.6521,1.0,0.7827

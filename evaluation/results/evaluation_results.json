@@ -1,0 +1,1254 @@
+{
+  "baseline": {
+    "system": "baseline",
+    "num_queries": 24,
+    "macro_metrics": {
+      "p@5": 0.6111,
+      "p@10": 0.496,
+      "r@5": 0.7222,
+      "r@10": 0.7472,
+      "f1@5": 0.6284,
+      "mrr": 0.9792,
+      "map": 0.7124
+    },
+    "category_breakdown": {
+      "A_Hindi": {
+        "num_queries": 4,
+        "p@5": 0.5,
+        "r@5": 0.6667,
+        "mrr": 1.0,
+        "map": 0.6667
+      },
+      "B_English": {
+        "num_queries": 4,
+        "p@5": 0.8,
+        "r@5": 0.6667,
+        "mrr": 1.0,
+        "map": 0.6667
+      },
+      "C_Hinglish": {
+        "num_queries": 4,
+        "p@5": 0.55,
+        "r@5": 0.9167,
+        "mrr": 1.0,
+        "map": 0.9167
+      },
+      "D_Romanized_Hindi": {
+        "num_queries": 4,
+        "p@5": 0.6,
+        "r@5": 0.8334,
+        "mrr": 1.0,
+        "map": 0.8334
+      },
+      "E_Spelling_Variants": {
+        "num_queries": 4,
+        "p@5": 0.7,
+        "r@5": 0.5834,
+        "mrr": 1.0,
+        "map": 0.5
+      },
+      "F_Transliterated": {
+        "num_queries": 4,
+        "p@5": 0.5167,
+        "r@5": 0.6667,
+        "mrr": 0.875,
+        "map": 0.6907
+      }
+    },
+    "queries": [
+      {
+        "query_id": "q01",
+        "query": "कल का मौसम",
+        "category": "A_Hindi",
+        "relevant_count": 3,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_003",
+          "doc_005",
+          "doc_024",
+          "doc_018",
+          "doc_001",
+          "doc_015",
+          "doc_022",
+          "doc_027",
+          "doc_020",
+          "doc_030"
+        ],
+        "p@5": 0.4,
+        "p@10": 0.2,
+        "r@5": 0.6667,
+        "r@10": 0.6667,
+        "f1@5": 0.5,
+        "mrr": 1.0,
+        "ap": 0.6667
+      },
+      {
+        "query_id": "q02",
+        "query": "भारत का संविधान",
+        "category": "A_Hindi",
+        "relevant_count": 2,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_001",
+          "doc_018",
+          "doc_009",
+          "doc_027",
+          "doc_022",
+          "doc_003",
+          "doc_015",
+          "doc_011",
+          "doc_020",
+          "doc_012"
+        ],
+        "p@5": 0.2,
+        "p@10": 0.1,
+        "r@5": 0.5,
+        "r@10": 0.5,
+        "f1@5": 0.2857,
+        "mrr": 1.0,
+        "ap": 0.5
+      },
+      {
+        "query_id": "q03",
+        "query": "चंद्रयान अंतरिक्ष अभियान",
+        "category": "A_Hindi",
+        "relevant_count": 3,
+        "retrieved_count": 3,
+        "retrieved_ids": [
+          "doc_006",
+          "doc_007",
+          "doc_008"
+        ],
+        "p@5": 1.0,
+        "p@10": 1.0,
+        "r@5": 1.0,
+        "r@10": 1.0,
+        "f1@5": 1.0,
+        "mrr": 1.0,
+        "ap": 1.0
+      },
+      {
+        "query_id": "q04",
+        "query": "भारतीय संस्कृति और त्योहार",
+        "category": "A_Hindi",
+        "relevant_count": 4,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_018",
+          "doc_009",
+          "doc_027",
+          "doc_030",
+          "doc_025",
+          "doc_003",
+          "doc_020",
+          "doc_011",
+          "doc_022",
+          "doc_012"
+        ],
+        "p@5": 0.4,
+        "p@10": 0.2,
+        "r@5": 0.5,
+        "r@10": 0.5,
+        "f1@5": 0.4444,
+        "mrr": 1.0,
+        "ap": 0.5
+      },
+      {
+        "query_id": "q05",
+        "query": "weather tomorrow",
+        "category": "B_English",
+        "relevant_count": 3,
+        "retrieved_count": 2,
+        "retrieved_ids": [
+          "doc_004",
+          "doc_005"
+        ],
+        "p@5": 1.0,
+        "p@10": 1.0,
+        "r@5": 0.6667,
+        "r@10": 0.6667,
+        "f1@5": 0.8,
+        "mrr": 1.0,
+        "ap": 0.6667
+      },
+      {
+        "query_id": "q06",
+        "query": "constitution fundamental rights",
+        "category": "B_English",
+        "relevant_count": 2,
+        "retrieved_count": 1,
+        "retrieved_ids": [
+          "doc_002"
+        ],
+        "p@5": 1.0,
+        "p@10": 1.0,
+        "r@5": 0.5,
+        "r@10": 0.5,
+        "f1@5": 0.6667,
+        "mrr": 1.0,
+        "ap": 0.5
+      },
+      {
+        "query_id": "q07",
+        "query": "chandrayaan moon mission isro",
+        "category": "B_English",
+        "relevant_count": 3,
+        "retrieved_count": 3,
+        "retrieved_ids": [
+          "doc_007",
+          "doc_008",
+          "doc_006"
+        ],
+        "p@5": 1.0,
+        "p@10": 1.0,
+        "r@5": 1.0,
+        "r@10": 1.0,
+        "f1@5": 1.0,
+        "mrr": 1.0,
+        "ap": 1.0
+      },
+      {
+        "query_id": "q08",
+        "query": "digital india technology",
+        "category": "B_English",
+        "relevant_count": 2,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_021",
+          "doc_031",
+          "doc_013",
+          "doc_014",
+          "doc_007",
+          "doc_010",
+          "doc_028",
+          "doc_002",
+          "doc_032",
+          "doc_008"
+        ],
+        "p@5": 0.2,
+        "p@10": 0.1,
+        "r@5": 0.5,
+        "r@10": 0.5,
+        "f1@5": 0.2857,
+        "mrr": 1.0,
+        "ap": 0.5
+      },
+      {
+        "query_id": "q09",
+        "query": "kal ka weather kaisa hoga",
+        "category": "C_Hinglish",
+        "relevant_count": 3,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_005",
+          "doc_003",
+          "doc_004",
+          "doc_018",
+          "doc_001",
+          "doc_008",
+          "doc_015",
+          "doc_017",
+          "doc_029",
+          "doc_022"
+        ],
+        "p@5": 0.6,
+        "p@10": 0.3,
+        "r@5": 1.0,
+        "r@10": 1.0,
+        "f1@5": 0.75,
+        "mrr": 1.0,
+        "ap": 1.0
+      },
+      {
+        "query_id": "q10",
+        "query": "bharat ka space mission chandrayaan",
+        "category": "C_Hinglish",
+        "relevant_count": 3,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_008",
+          "doc_007",
+          "doc_006",
+          "doc_001",
+          "doc_009",
+          "doc_018",
+          "doc_027",
+          "doc_024",
+          "doc_022",
+          "doc_011"
+        ],
+        "p@5": 0.6,
+        "p@10": 0.3,
+        "r@5": 1.0,
+        "r@10": 1.0,
+        "f1@5": 0.75,
+        "mrr": 1.0,
+        "ap": 1.0
+      },
+      {
+        "query_id": "q11",
+        "query": "online shiksha aur digital vidyalaya",
+        "category": "C_Hinglish",
+        "relevant_count": 3,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_014",
+          "doc_012",
+          "doc_021",
+          "doc_017",
+          "doc_032",
+          "doc_011",
+          "doc_005",
+          "doc_024",
+          "doc_029",
+          "doc_027"
+        ],
+        "p@5": 0.4,
+        "p@10": 0.2,
+        "r@5": 0.6667,
+        "r@10": 0.6667,
+        "f1@5": 0.5,
+        "mrr": 1.0,
+        "ap": 0.6667
+      },
+      {
+        "query_id": "q12",
+        "query": "desh ki rajdhani dilli history",
+        "category": "C_Hinglish",
+        "relevant_count": 3,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_029",
+          "doc_027",
+          "doc_028",
+          "doc_011",
+          "doc_030",
+          "doc_032",
+          "doc_009",
+          "doc_024",
+          "doc_022",
+          "doc_020"
+        ],
+        "p@5": 0.6,
+        "p@10": 0.3,
+        "r@5": 1.0,
+        "r@10": 1.0,
+        "f1@5": 0.75,
+        "mrr": 1.0,
+        "ap": 1.0
+      },
+      {
+        "query_id": "q13",
+        "query": "kal ka mausam",
+        "category": "D_Romanized_Hindi",
+        "relevant_count": 3,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_005",
+          "doc_003",
+          "doc_024",
+          "doc_018",
+          "doc_001",
+          "doc_008",
+          "doc_015",
+          "doc_017",
+          "doc_029",
+          "doc_022"
+        ],
+        "p@5": 0.4,
+        "p@10": 0.2,
+        "r@5": 0.6667,
+        "r@10": 0.6667,
+        "f1@5": 0.5,
+        "mrr": 1.0,
+        "ap": 0.6667
+      },
+      {
+        "query_id": "q14",
+        "query": "mera bharat mahan",
+        "category": "D_Romanized_Hindi",
+        "relevant_count": 3,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_011",
+          "doc_009",
+          "doc_001",
+          "doc_008",
+          "doc_027",
+          "doc_024",
+          "doc_014",
+          "doc_022",
+          "doc_020",
+          "doc_012"
+        ],
+        "p@5": 0.4,
+        "p@10": 0.2,
+        "r@5": 0.6667,
+        "r@10": 0.6667,
+        "f1@5": 0.5,
+        "mrr": 1.0,
+        "ap": 0.6667
+      },
+      {
+        "query_id": "q15",
+        "query": "bharat desh",
+        "category": "D_Romanized_Hindi",
+        "relevant_count": 3,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_011",
+          "doc_009",
+          "doc_001",
+          "doc_008",
+          "doc_027",
+          "doc_024",
+          "doc_014",
+          "doc_022",
+          "doc_020",
+          "doc_032"
+        ],
+        "p@5": 0.6,
+        "p@10": 0.3,
+        "r@5": 1.0,
+        "r@10": 1.0,
+        "f1@5": 0.75,
+        "mrr": 1.0,
+        "ap": 1.0
+      },
+      {
+        "query_id": "q16",
+        "query": "shri krishna gita sandesh",
+        "category": "D_Romanized_Hindi",
+        "relevant_count": 3,
+        "retrieved_count": 3,
+        "retrieved_ids": [
+          "doc_017",
+          "doc_016",
+          "doc_015"
+        ],
+        "p@5": 1.0,
+        "p@10": 1.0,
+        "r@5": 1.0,
+        "r@10": 1.0,
+        "f1@5": 1.0,
+        "mrr": 1.0,
+        "ap": 1.0
+      },
+      {
+        "query_id": "q17",
+        "query": "mera bhaarat",
+        "category": "E_Spelling_Variants",
+        "relevant_count": 3,
+        "retrieved_count": 2,
+        "retrieved_ids": [
+          "doc_011",
+          "doc_009"
+        ],
+        "p@5": 1.0,
+        "p@10": 1.0,
+        "r@5": 0.6667,
+        "r@10": 0.6667,
+        "f1@5": 0.8,
+        "mrr": 1.0,
+        "ap": 0.6667
+      },
+      {
+        "query_id": "q18",
+        "query": "krishan ji",
+        "category": "E_Spelling_Variants",
+        "relevant_count": 3,
+        "retrieved_count": 1,
+        "retrieved_ids": [
+          "doc_017"
+        ],
+        "p@5": 1.0,
+        "p@10": 1.0,
+        "r@5": 0.3333,
+        "r@10": 0.3333,
+        "f1@5": 0.5,
+        "mrr": 1.0,
+        "ap": 0.3333
+      },
+      {
+        "query_id": "q19",
+        "query": "siksha aur vidyalaya",
+        "category": "E_Spelling_Variants",
+        "relevant_count": 3,
+        "retrieved_count": 9,
+        "retrieved_ids": [
+          "doc_014",
+          "doc_032",
+          "doc_011",
+          "doc_012",
+          "doc_017",
+          "doc_005",
+          "doc_024",
+          "doc_029",
+          "doc_008"
+        ],
+        "p@5": 0.4,
+        "p@10": 0.2222,
+        "r@5": 0.6667,
+        "r@10": 0.6667,
+        "f1@5": 0.5,
+        "mrr": 1.0,
+        "ap": 0.5
+      },
+      {
+        "query_id": "q20",
+        "query": "himalay parvat mausam",
+        "category": "E_Spelling_Variants",
+        "relevant_count": 3,
+        "retrieved_count": 5,
+        "retrieved_ids": [
+          "doc_024",
+          "doc_003",
+          "doc_005",
+          "doc_022",
+          "doc_009"
+        ],
+        "p@5": 0.4,
+        "p@10": 0.4,
+        "r@5": 0.6667,
+        "r@10": 0.6667,
+        "f1@5": 0.5,
+        "mrr": 1.0,
+        "ap": 0.5
+      },
+      {
+        "query_id": "q21",
+        "query": "delhi mausam",
+        "category": "F_Transliterated",
+        "relevant_count": 5,
+        "retrieved_count": 7,
+        "retrieved_ids": [
+          "doc_003",
+          "doc_005",
+          "doc_024",
+          "doc_029",
+          "doc_027",
+          "doc_028",
+          "doc_004"
+        ],
+        "p@5": 0.6,
+        "p@10": 0.7143,
+        "r@5": 0.6,
+        "r@10": 1.0,
+        "f1@5": 0.6,
+        "mrr": 1.0,
+        "ap": 0.7962
+      },
+      {
+        "query_id": "q22",
+        "query": "bhartiya itihas",
+        "category": "F_Transliterated",
+        "relevant_count": 5,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_029",
+          "doc_017",
+          "doc_011",
+          "doc_032",
+          "doc_030",
+          "doc_025",
+          "doc_022",
+          "doc_020",
+          "doc_006",
+          "doc_018"
+        ],
+        "p@5": 0.4,
+        "p@10": 0.3,
+        "r@5": 0.4,
+        "r@10": 0.6,
+        "f1@5": 0.4,
+        "mrr": 0.5,
+        "ap": 0.3
+      },
+      {
+        "query_id": "q23",
+        "query": "kisan aur krishi vikas",
+        "category": "F_Transliterated",
+        "relevant_count": 3,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_032",
+          "doc_030",
+          "doc_011",
+          "doc_017",
+          "doc_005",
+          "doc_024",
+          "doc_029",
+          "doc_014",
+          "doc_020",
+          "doc_012"
+        ],
+        "p@5": 0.4,
+        "p@10": 0.2,
+        "r@5": 0.6667,
+        "r@10": 0.6667,
+        "f1@5": 0.5,
+        "mrr": 1.0,
+        "ap": 0.6667
+      },
+      {
+        "query_id": "q24",
+        "query": "diwali holi tyohar",
+        "category": "F_Transliterated",
+        "relevant_count": 2,
+        "retrieved_count": 3,
+        "retrieved_ids": [
+          "doc_018",
+          "doc_019",
+          "doc_011"
+        ],
+        "p@5": 0.6667,
+        "p@10": 0.6667,
+        "r@5": 1.0,
+        "r@10": 1.0,
+        "f1@5": 0.8,
+        "mrr": 1.0,
+        "ap": 1.0
+      }
+    ]
+  },
+  "indicbridge": {
+    "system": "indicbridge",
+    "num_queries": 24,
+    "macro_metrics": {
+      "p@5": 0.5931,
+      "p@10": 0.5349,
+      "r@5": 0.7306,
+      "r@10": 0.8195,
+      "f1@5": 0.6342,
+      "mrr": 1.0,
+      "map": 0.765
+    },
+    "category_breakdown": {
+      "A_Hindi": {
+        "num_queries": 4,
+        "p@5": 0.5667,
+        "r@5": 0.6667,
+        "mrr": 1.0,
+        "map": 0.6292
+      },
+      "B_English": {
+        "num_queries": 4,
+        "p@5": 0.8,
+        "r@5": 0.6667,
+        "mrr": 1.0,
+        "map": 0.6667
+      },
+      "C_Hinglish": {
+        "num_queries": 4,
+        "p@5": 0.45,
+        "r@5": 0.75,
+        "mrr": 1.0,
+        "map": 0.8631
+      },
+      "D_Romanized_Hindi": {
+        "num_queries": 4,
+        "p@5": 0.6,
+        "r@5": 0.8334,
+        "mrr": 1.0,
+        "map": 0.8334
+      },
+      "E_Spelling_Variants": {
+        "num_queries": 4,
+        "p@5": 0.575,
+        "r@5": 0.75,
+        "mrr": 1.0,
+        "map": 0.7917
+      },
+      "F_Transliterated": {
+        "num_queries": 4,
+        "p@5": 0.5667,
+        "r@5": 0.7167,
+        "mrr": 1.0,
+        "map": 0.806
+      }
+    },
+    "queries": [
+      {
+        "query_id": "q01",
+        "query": "कल का मौसम",
+        "category": "A_Hindi",
+        "relevant_count": 3,
+        "retrieved_count": 3,
+        "retrieved_ids": [
+          "doc_003",
+          "doc_005",
+          "doc_024"
+        ],
+        "p@5": 0.6667,
+        "p@10": 0.6667,
+        "r@5": 0.6667,
+        "r@10": 0.6667,
+        "f1@5": 0.6667,
+        "mrr": 1.0,
+        "ap": 0.6667
+      },
+      {
+        "query_id": "q02",
+        "query": "भारत का संविधान",
+        "category": "A_Hindi",
+        "relevant_count": 2,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_001",
+          "doc_009",
+          "doc_027",
+          "doc_022",
+          "doc_020",
+          "doc_012",
+          "doc_006",
+          "doc_018",
+          "doc_003",
+          "doc_011"
+        ],
+        "p@5": 0.2,
+        "p@10": 0.1,
+        "r@5": 0.5,
+        "r@10": 0.5,
+        "f1@5": 0.2857,
+        "mrr": 1.0,
+        "ap": 0.5
+      },
+      {
+        "query_id": "q03",
+        "query": "चंद्रयान अंतरिक्ष अभियान",
+        "category": "A_Hindi",
+        "relevant_count": 3,
+        "retrieved_count": 3,
+        "retrieved_ids": [
+          "doc_006",
+          "doc_007",
+          "doc_008"
+        ],
+        "p@5": 1.0,
+        "p@10": 1.0,
+        "r@5": 1.0,
+        "r@10": 1.0,
+        "f1@5": 1.0,
+        "mrr": 1.0,
+        "ap": 1.0
+      },
+      {
+        "query_id": "q04",
+        "query": "भारतीय संस्कृति और त्योहार",
+        "category": "A_Hindi",
+        "relevant_count": 4,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_018",
+          "doc_030",
+          "doc_025",
+          "doc_027",
+          "doc_009",
+          "doc_022",
+          "doc_020",
+          "doc_006",
+          "doc_003",
+          "doc_011"
+        ],
+        "p@5": 0.4,
+        "p@10": 0.2,
+        "r@5": 0.5,
+        "r@10": 0.5,
+        "f1@5": 0.4444,
+        "mrr": 1.0,
+        "ap": 0.35
+      },
+      {
+        "query_id": "q05",
+        "query": "weather tomorrow",
+        "category": "B_English",
+        "relevant_count": 3,
+        "retrieved_count": 2,
+        "retrieved_ids": [
+          "doc_004",
+          "doc_005"
+        ],
+        "p@5": 1.0,
+        "p@10": 1.0,
+        "r@5": 0.6667,
+        "r@10": 0.6667,
+        "f1@5": 0.8,
+        "mrr": 1.0,
+        "ap": 0.6667
+      },
+      {
+        "query_id": "q06",
+        "query": "constitution fundamental rights",
+        "category": "B_English",
+        "relevant_count": 2,
+        "retrieved_count": 1,
+        "retrieved_ids": [
+          "doc_002"
+        ],
+        "p@5": 1.0,
+        "p@10": 1.0,
+        "r@5": 0.5,
+        "r@10": 0.5,
+        "f1@5": 0.6667,
+        "mrr": 1.0,
+        "ap": 0.5
+      },
+      {
+        "query_id": "q07",
+        "query": "chandrayaan moon mission isro",
+        "category": "B_English",
+        "relevant_count": 3,
+        "retrieved_count": 3,
+        "retrieved_ids": [
+          "doc_007",
+          "doc_008",
+          "doc_006"
+        ],
+        "p@5": 1.0,
+        "p@10": 1.0,
+        "r@5": 1.0,
+        "r@10": 1.0,
+        "f1@5": 1.0,
+        "mrr": 1.0,
+        "ap": 1.0
+      },
+      {
+        "query_id": "q08",
+        "query": "digital india technology",
+        "category": "B_English",
+        "relevant_count": 2,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_021",
+          "doc_031",
+          "doc_013",
+          "doc_007",
+          "doc_014",
+          "doc_010",
+          "doc_028",
+          "doc_002",
+          "doc_032",
+          "doc_008"
+        ],
+        "p@5": 0.2,
+        "p@10": 0.1,
+        "r@5": 0.5,
+        "r@10": 0.5,
+        "f1@5": 0.2857,
+        "mrr": 1.0,
+        "ap": 0.5
+      },
+      {
+        "query_id": "q09",
+        "query": "kal ka weather kaisa hoga",
+        "category": "C_Hinglish",
+        "relevant_count": 3,
+        "retrieved_count": 7,
+        "retrieved_ids": [
+          "doc_005",
+          "doc_003",
+          "doc_017",
+          "doc_008",
+          "doc_029",
+          "doc_024",
+          "doc_004"
+        ],
+        "p@5": 0.4,
+        "p@10": 0.4286,
+        "r@5": 0.6667,
+        "r@10": 1.0,
+        "f1@5": 0.5,
+        "mrr": 1.0,
+        "ap": 0.8095
+      },
+      {
+        "query_id": "q10",
+        "query": "bharat ka space mission chandrayaan",
+        "category": "C_Hinglish",
+        "relevant_count": 3,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_008",
+          "doc_007",
+          "doc_006",
+          "doc_024",
+          "doc_001",
+          "doc_009",
+          "doc_027",
+          "doc_022",
+          "doc_020",
+          "doc_012"
+        ],
+        "p@5": 0.6,
+        "p@10": 0.3,
+        "r@5": 1.0,
+        "r@10": 1.0,
+        "f1@5": 0.75,
+        "mrr": 1.0,
+        "ap": 1.0
+      },
+      {
+        "query_id": "q11",
+        "query": "online shiksha aur digital vidyalaya",
+        "category": "C_Hinglish",
+        "relevant_count": 3,
+        "retrieved_count": 7,
+        "retrieved_ids": [
+          "doc_014",
+          "doc_012",
+          "doc_021",
+          "doc_027",
+          "doc_017",
+          "doc_031",
+          "doc_013"
+        ],
+        "p@5": 0.4,
+        "p@10": 0.4286,
+        "r@5": 0.6667,
+        "r@10": 1.0,
+        "f1@5": 0.5,
+        "mrr": 1.0,
+        "ap": 0.8095
+      },
+      {
+        "query_id": "q12",
+        "query": "desh ki rajdhani dilli history",
+        "category": "C_Hinglish",
+        "relevant_count": 3,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_029",
+          "doc_027",
+          "doc_032",
+          "doc_011",
+          "doc_008",
+          "doc_028",
+          "doc_024",
+          "doc_030",
+          "doc_009",
+          "doc_005"
+        ],
+        "p@5": 0.4,
+        "p@10": 0.3,
+        "r@5": 0.6667,
+        "r@10": 1.0,
+        "f1@5": 0.5,
+        "mrr": 1.0,
+        "ap": 0.8333
+      },
+      {
+        "query_id": "q13",
+        "query": "kal ka mausam",
+        "category": "D_Romanized_Hindi",
+        "relevant_count": 3,
+        "retrieved_count": 6,
+        "retrieved_ids": [
+          "doc_005",
+          "doc_003",
+          "doc_024",
+          "doc_008",
+          "doc_017",
+          "doc_029"
+        ],
+        "p@5": 0.4,
+        "p@10": 0.3333,
+        "r@5": 0.6667,
+        "r@10": 0.6667,
+        "f1@5": 0.5,
+        "mrr": 1.0,
+        "ap": 0.6667
+      },
+      {
+        "query_id": "q14",
+        "query": "mera bharat mahan",
+        "category": "D_Romanized_Hindi",
+        "relevant_count": 3,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_011",
+          "doc_009",
+          "doc_003",
+          "doc_001",
+          "doc_008",
+          "doc_027",
+          "doc_024",
+          "doc_014",
+          "doc_022",
+          "doc_020"
+        ],
+        "p@5": 0.4,
+        "p@10": 0.2,
+        "r@5": 0.6667,
+        "r@10": 0.6667,
+        "f1@5": 0.5,
+        "mrr": 1.0,
+        "ap": 0.6667
+      },
+      {
+        "query_id": "q15",
+        "query": "bharat desh",
+        "category": "D_Romanized_Hindi",
+        "relevant_count": 3,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_011",
+          "doc_009",
+          "doc_001",
+          "doc_008",
+          "doc_027",
+          "doc_024",
+          "doc_014",
+          "doc_022",
+          "doc_020",
+          "doc_032"
+        ],
+        "p@5": 0.6,
+        "p@10": 0.3,
+        "r@5": 1.0,
+        "r@10": 1.0,
+        "f1@5": 0.75,
+        "mrr": 1.0,
+        "ap": 1.0
+      },
+      {
+        "query_id": "q16",
+        "query": "shri krishna gita sandesh",
+        "category": "D_Romanized_Hindi",
+        "relevant_count": 3,
+        "retrieved_count": 3,
+        "retrieved_ids": [
+          "doc_017",
+          "doc_016",
+          "doc_015"
+        ],
+        "p@5": 1.0,
+        "p@10": 1.0,
+        "r@5": 1.0,
+        "r@10": 1.0,
+        "f1@5": 1.0,
+        "mrr": 1.0,
+        "ap": 1.0
+      },
+      {
+        "query_id": "q17",
+        "query": "mera bhaarat",
+        "category": "E_Spelling_Variants",
+        "relevant_count": 3,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_011",
+          "doc_009",
+          "doc_001",
+          "doc_008",
+          "doc_027",
+          "doc_024",
+          "doc_014",
+          "doc_022",
+          "doc_020",
+          "doc_012"
+        ],
+        "p@5": 0.4,
+        "p@10": 0.2,
+        "r@5": 0.6667,
+        "r@10": 0.6667,
+        "f1@5": 0.5,
+        "mrr": 1.0,
+        "ap": 0.6667
+      },
+      {
+        "query_id": "q18",
+        "query": "krishan ji",
+        "category": "E_Spelling_Variants",
+        "relevant_count": 3,
+        "retrieved_count": 3,
+        "retrieved_ids": [
+          "doc_017",
+          "doc_015",
+          "doc_016"
+        ],
+        "p@5": 1.0,
+        "p@10": 1.0,
+        "r@5": 1.0,
+        "r@10": 1.0,
+        "f1@5": 1.0,
+        "mrr": 1.0,
+        "ap": 1.0
+      },
+      {
+        "query_id": "q19",
+        "query": "siksha aur vidyalaya",
+        "category": "E_Spelling_Variants",
+        "relevant_count": 3,
+        "retrieved_count": 4,
+        "retrieved_ids": [
+          "doc_012",
+          "doc_014",
+          "doc_027",
+          "doc_017"
+        ],
+        "p@5": 0.5,
+        "p@10": 0.5,
+        "r@5": 0.6667,
+        "r@10": 0.6667,
+        "f1@5": 0.5714,
+        "mrr": 1.0,
+        "ap": 0.6667
+      },
+      {
+        "query_id": "q20",
+        "query": "himalay parvat mausam",
+        "category": "E_Spelling_Variants",
+        "relevant_count": 3,
+        "retrieved_count": 6,
+        "retrieved_ids": [
+          "doc_024",
+          "doc_022",
+          "doc_009",
+          "doc_003",
+          "doc_005",
+          "doc_023"
+        ],
+        "p@5": 0.4,
+        "p@10": 0.5,
+        "r@5": 0.6667,
+        "r@10": 1.0,
+        "f1@5": 0.5,
+        "mrr": 1.0,
+        "ap": 0.8333
+      },
+      {
+        "query_id": "q21",
+        "query": "delhi mausam",
+        "category": "F_Transliterated",
+        "relevant_count": 5,
+        "retrieved_count": 7,
+        "retrieved_ids": [
+          "doc_003",
+          "doc_005",
+          "doc_024",
+          "doc_029",
+          "doc_027",
+          "doc_028",
+          "doc_004"
+        ],
+        "p@5": 0.6,
+        "p@10": 0.7143,
+        "r@5": 0.6,
+        "r@10": 1.0,
+        "f1@5": 0.6,
+        "mrr": 1.0,
+        "ap": 0.7962
+      },
+      {
+        "query_id": "q22",
+        "query": "bhartiya itihas",
+        "category": "F_Transliterated",
+        "relevant_count": 5,
+        "retrieved_count": 10,
+        "retrieved_ids": [
+          "doc_017",
+          "doc_006",
+          "doc_032",
+          "doc_011",
+          "doc_029",
+          "doc_030",
+          "doc_025",
+          "doc_027",
+          "doc_009",
+          "doc_022"
+        ],
+        "p@5": 0.6,
+        "p@10": 0.5,
+        "r@5": 0.6,
+        "r@10": 1.0,
+        "f1@5": 0.6,
+        "mrr": 1.0,
+        "ap": 0.7611
+      },
+      {
+        "query_id": "q23",
+        "query": "kisan aur krishi vikas",
+        "category": "F_Transliterated",
+        "relevant_count": 3,
+        "retrieved_count": 5,
+        "retrieved_ids": [
+          "doc_032",
+          "doc_030",
+          "doc_020",
+          "doc_012",
+          "doc_011"
+        ],
+        "p@5": 0.4,
+        "p@10": 0.4,
+        "r@5": 0.6667,
+        "r@10": 0.6667,
+        "f1@5": 0.5,
+        "mrr": 1.0,
+        "ap": 0.6667
+      },
+      {
+        "query_id": "q24",
+        "query": "diwali holi tyohar",
+        "category": "F_Transliterated",
+        "relevant_count": 2,
+        "retrieved_count": 3,
+        "retrieved_ids": [
+          "doc_018",
+          "doc_019",
+          "doc_011"
+        ],
+        "p@5": 0.6667,
+        "p@10": 0.6667,
+        "r@5": 1.0,
+        "r@10": 1.0,
+        "f1@5": 0.8,
+        "mrr": 1.0,
+        "ap": 1.0
+      }
+    ]
+  },
+  "comparison": {
+    "p@5": {
+      "baseline": 0.6111,
+      "indicbridge": 0.5931,
+      "absolute_gain": -0.018,
+      "relative_gain_pct": -2.95
+    },
+    "p@10": {
+      "baseline": 0.496,
+      "indicbridge": 0.5349,
+      "absolute_gain": 0.0389,
+      "relative_gain_pct": 7.84
+    },
+    "r@5": {
+      "baseline": 0.7222,
+      "indicbridge": 0.7306,
+      "absolute_gain": 0.0084,
+      "relative_gain_pct": 1.16
+    },
+    "r@10": {
+      "baseline": 0.7472,
+      "indicbridge": 0.8195,
+      "absolute_gain": 0.0723,
+      "relative_gain_pct": 9.68
+    },
+    "f1@5": {
+      "baseline": 0.6284,
+      "indicbridge": 0.6342,
+      "absolute_gain": 0.0058,
+      "relative_gain_pct": 0.92
+    },
+    "mrr": {
+      "baseline": 0.9792,
+      "indicbridge": 1.0,
+      "absolute_gain": 0.0208,
+      "relative_gain_pct": 2.12
+    },
+    "map": {
+      "baseline": 0.7124,
+      "indicbridge": 0.765,
+      "absolute_gain": 0.0526,
+      "relative_gain_pct": 7.38
+    }
+  }
+}

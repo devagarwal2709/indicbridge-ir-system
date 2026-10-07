@@ -1,0 +1,170 @@
+[
+  {
+    "id": "q01",
+    "query": "कल का मौसम",
+    "category": "A_Hindi",
+    "description": "Hindi query in Devanagari script for tomorrow's weather",
+    "relevant_documents": ["doc_003", "doc_004", "doc_005"]
+  },
+  {
+    "id": "q02",
+    "query": "भारत का संविधान",
+    "category": "A_Hindi",
+    "description": "Hindi query for Constitution of India",
+    "relevant_documents": ["doc_001", "doc_002"]
+  },
+  {
+    "id": "q03",
+    "query": "चंद्रयान अंतरिक्ष अभियान",
+    "category": "A_Hindi",
+    "description": "Hindi query for Chandrayaan space exploration mission",
+    "relevant_documents": ["doc_006", "doc_007", "doc_008"]
+  },
+  {
+    "id": "q04",
+    "query": "भारतीय संस्कृति और त्योहार",
+    "category": "A_Hindi",
+    "description": "Hindi query for Indian culture and festivals",
+    "relevant_documents": ["doc_009", "doc_010", "doc_018", "doc_019"]
+  },
+  {
+    "id": "q05",
+    "query": "weather tomorrow",
+    "category": "B_English",
+    "description": "English query for tomorrow weather forecast",
+    "relevant_documents": ["doc_003", "doc_004", "doc_005"]
+  },
+  {
+    "id": "q06",
+    "query": "constitution fundamental rights",
+    "category": "B_English",
+    "description": "English query for constitutional rights",
+    "relevant_documents": ["doc_001", "doc_002"]
+  },
+  {
+    "id": "q07",
+    "query": "chandrayaan moon mission isro",
+    "category": "B_English",
+    "description": "English query for ISRO lunar exploration",
+    "relevant_documents": ["doc_006", "doc_007", "doc_008"]
+  },
+  {
+    "id": "q08",
+    "query": "digital india technology",
+    "category": "B_English",
+    "description": "English query for Digital India and technology",
+    "relevant_documents": ["doc_020", "doc_021"]
+  },
+  {
+    "id": "q09",
+    "query": "kal ka weather kaisa hoga",
+    "category": "C_Hinglish",
+    "description": "Code-mixed Hinglish query for weather",
+    "relevant_documents": ["doc_003", "doc_004", "doc_005"]
+  },
+  {
+    "id": "q10",
+    "query": "bharat ka space mission chandrayaan",
+    "category": "C_Hinglish",
+    "description": "Hinglish query for India space mission",
+    "relevant_documents": ["doc_006", "doc_007", "doc_008"]
+  },
+  {
+    "id": "q11",
+    "query": "online shiksha aur digital vidyalaya",
+    "category": "C_Hinglish",
+    "description": "Hinglish query for online education and schools",
+    "relevant_documents": ["doc_012", "doc_013", "doc_014"]
+  },
+  {
+    "id": "q12",
+    "query": "desh ki rajdhani dilli history",
+    "category": "C_Hinglish",
+    "description": "Hinglish query for national capital Delhi history",
+    "relevant_documents": ["doc_027", "doc_028", "doc_029"]
+  },
+  {
+    "id": "q13",
+    "query": "kal ka mausam",
+    "category": "D_Romanized_Hindi",
+    "description": "Romanized Hindi query for tomorrow weather",
+    "relevant_documents": ["doc_003", "doc_004", "doc_005"]
+  },
+  {
+    "id": "q14",
+    "query": "mera bharat mahan",
+    "category": "D_Romanized_Hindi",
+    "description": "Romanized Hindi query for Mera Bharat Mahan",
+    "relevant_documents": ["doc_009", "doc_010", "doc_011"]
+  },
+  {
+    "id": "q15",
+    "query": "bharat desh",
+    "category": "D_Romanized_Hindi",
+    "description": "Romanized Hindi query for Bharat Desh",
+    "relevant_documents": ["doc_001", "doc_009", "doc_011"]
+  },
+  {
+    "id": "q16",
+    "query": "shri krishna gita sandesh",
+    "category": "D_Romanized_Hindi",
+    "description": "Romanized Hindi query for Lord Krishna Bhagavad Gita",
+    "relevant_documents": ["doc_015", "doc_016", "doc_017"]
+  },
+  {
+    "id": "q17",
+    "query": "mera bhaarat",
+    "category": "E_Spelling_Variants",
+    "description": "Spelling variant with double 'aa' in bharat",
+    "relevant_documents": ["doc_009", "doc_010", "doc_011"]
+  },
+  {
+    "id": "q18",
+    "query": "krishan ji",
+    "category": "E_Spelling_Variants",
+    "description": "Spelling variant krishan instead of krishna",
+    "relevant_documents": ["doc_015", "doc_016", "doc_017"]
+  },
+  {
+    "id": "q19",
+    "query": "siksha aur vidyalaya",
+    "category": "E_Spelling_Variants",
+    "description": "Spelling variant siksha instead of shiksha",
+    "relevant_documents": ["doc_012", "doc_013", "doc_014"]
+  },
+  {
+    "id": "q20",
+    "query": "himalay parvat mausam",
+    "category": "E_Spelling_Variants",
+    "description": "Spelling variant himalay without terminal a",
+    "relevant_documents": ["doc_022", "doc_023", "doc_024"]
+  },
+  {
+    "id": "q21",
+    "query": "delhi mausam",
+    "category": "F_Transliterated",
+    "description": "Cross-script query pairing English 'delhi' with Hindi 'mausam'",
+    "relevant_documents": ["doc_003", "doc_004", "doc_005", "doc_027", "doc_028"]
+  },
+  {
+    "id": "q22",
+    "query": "bhartiya itihas",
+    "category": "F_Transliterated",
+    "description": "Romanized transliterated query for भारतीय इतिहास",
+    "relevant_documents": ["doc_006", "doc_009", "doc_011", "doc_017", "doc_027"]
+  },
+  {
+    "id": "q23",
+    "query": "kisan aur krishi vikas",
+    "category": "F_Transliterated",
+    "description": "Transliterated query for किसान और कृषि विकास",
+    "relevant_documents": ["doc_030", "doc_031", "doc_032"]
+  },
+  {
+    "id": "q24",
+    "query": "diwali holi tyohar",
+    "category": "F_Transliterated",
+    "description": "Transliterated query for दिवाली होली त्योहार",
+    "relevant_documents": ["doc_018", "doc_019"]
+  }
+]

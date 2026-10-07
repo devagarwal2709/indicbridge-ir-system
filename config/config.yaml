@@ -1,0 +1,35 @@
+# INDICBRIDGE Configuration File
+# Classical Information Retrieval & Cross-Script Multilingual Search Engine
+
+retrieval:
+  top_k: 10
+  min_similarity: 0.01
+  # Transparent Score Fusion Weights: final = alpha*cosine + beta*translit + gamma*phonetic + delta*exact
+  alpha: 0.70    # Classical TF-IDF Cosine similarity weight
+  beta: 0.15     # Cross-script transliteration match weight
+  gamma: 0.10    # Adapted Indic phonetic / fuzzy match weight
+  delta: 0.05    # Exact query token match bonus weight
+
+index:
+  use_sublinear_tf: true
+  min_df: 1
+  max_df_ratio: 0.95
+  ngram_range: [1, 1]
+
+preprocessing:
+  normalize_unicode: true
+  fold_nukta: true
+  strip_punctuation: true
+  lowercase_latin: true
+  use_stopwords: true
+  use_stemming: true
+  enable_transliteration: true
+  enable_romanized_normalization: true
+  enable_phonetic: true
+  phonetic_similarity_threshold: 0.65
+
+paths:
+  documents: "data/documents.jsonl"
+  evaluation_queries: "data/evaluation_queries.json"
+  index_dir: "data/index_cache"
+  evaluation_results: "evaluation/results"
