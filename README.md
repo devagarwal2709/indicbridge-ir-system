@@ -6,9 +6,9 @@
 > **Team Members:**
 >
 > - Dev Agarwal (Roll No: 2410110118)
-> - Kavya Pratap Singh Chauhan (Roll No: 2410110167)
-> - Suryansh Siddhu (Roll No: 2410110623)
-> - Harsh Sumrav (Roll No: 2410110142)
+> - Kavya Pratap Singh Chauhan (Roll No: 2410110167) - https://github.com/zencloser/
+> - Suryansh Siddhu (Roll No: 2410110623) - https://github.com/SuryanshSiddhu
+> - Harsh Sumrav (Roll No: 2410110142) - https://github.com/Harsh-Sumrav
 
 ---
 
