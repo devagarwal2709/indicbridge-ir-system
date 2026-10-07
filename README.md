@@ -64,38 +64,57 @@ IndicBridge addresses this challenge with a transparent **11-stage pipeline** in
 
 - **Smoothed Inverse Document Frequency (IDF):**
 
-  IDF(t) = ln((N + 1) / (df(t) + 1)) + 1.0
+  ```math
+  \mathrm{IDF}(t) = \ln\left(\frac{N + 1}{\mathrm{df}(t) + 1}\right) + 1.0
+  ```
 
 - **Sublinear Term Frequency (TF):**
 
-  TF(t, d) = 1 + ln(count(t, d)), for count > 0
+  ```math
+  \mathrm{TF}(t, d) = 1 + \ln\left(\mathrm{count}(t, d)\right), \quad \text{for } \mathrm{count}(t, d) > 0
+  ```
 
 - **Euclidean L2 Normalization:**
 
-  ‖d‖₂ = √[Σₜ∈d (TF(t, d) × IDF(t))²]
+  ```math
+  \lVert d \rVert_2 = \sqrt{\sum_{t \in d} \left(\mathrm{TF}(t, d) \times \mathrm{IDF}(t)\right)^2}
+  ```
 
   Document weights are normalized as:
 
-  w_d(t) = (TF(t, d) × IDF(t)) / ‖d‖₂
+  ```math
+  w_d(t) = \frac{\mathrm{TF}(t, d) \times \mathrm{IDF}(t)}{\lVert d \rVert_2}
+  ```
 
 - **Cosine Similarity Dot-Product:**
 
-  Cosine(q, d) = Σₜ∈q∩d w_q(t) × w_d(t)
+  ```math
+  \mathrm{Cosine}(q, d) = \sum_{t \in q \cap d} w_q(t) \times w_d(t)
+  ```
 
 - **Convex Score Fusion:**
 
-  Score_final(q, d) = α × Cosine(q, d)
-  + β × Translit(q, d)
-  + γ × Phonetic(q, d)
-  + δ × Exact(q, d)
+  ```math
+  \begin{aligned}
+  \mathrm{Score}_{\mathrm{final}}(q, d) ={}& \alpha \times \mathrm{Cosine}(q, d) \\
+  &+ \beta \times \mathrm{Translit}(q, d) \\
+  &+ \gamma \times \mathrm{Phonetic}(q, d) \\
+  &+ \delta \times \mathrm{Exact}(q, d)
+  \end{aligned}
+  ```
 
   **Default Weights:**
 
-  α = 0.70, β = 0.15, γ = 0.10, δ = 0.05
+  ```math
+  \alpha = 0.70, \quad \beta = 0.15, \quad \gamma = 0.10, \quad \delta = 0.05
+  ```
 
   The weights are strictly normalized to:
 
-  α + β + γ + δ = 1.00
+  ```math
+  \alpha + \beta + \gamma + \delta = 1.00
+  ```
+
 ---
 
 ## 3. Dataset & Provenance
@@ -115,13 +134,103 @@ The evaluation suite models the **FIRE (Forum for Information Retrieval Evaluati
 
 ## 4. Setup and Installation
 
+This guide assumes **no prior experience**. Follow the steps in order and you will have IndicBridge running on your computer.
+
 ### Prerequisites
 
 - Python 3.10+ (tested on Python 3.13)
 - Node.js 18+
 - npm
+- Git (only needed if you download the project using `git clone`)
 
-### 1. Install Dependencies
+### Step 1: Install the Required Software
+
+You need three tools installed on your computer. Skip any that you already have.
+
+**1. Python (3.10 or newer)**
+
+- Download from: <https://www.python.org/downloads/>
+- **Windows:** On the first installer screen, tick the box **"Add python.exe to PATH"** before clicking *Install Now*. This is very important.
+- **macOS / Linux:** Use the installer from the website, or your package manager (for example `brew install python` on macOS, `sudo apt install python3 python3-pip` on Ubuntu/Debian).
+
+**2. Node.js (18 or newer, includes npm)**
+
+- Download the **LTS** version from: <https://nodejs.org/>
+- Run the installer and keep the default options. npm is installed automatically along with Node.js.
+
+**3. Git (optional, but recommended)**
+
+- Download from: <https://git-scm.com/downloads>
+- Run the installer and keep the default options.
+
+**Check that everything installed correctly.** Open a terminal (see the tip below) and run:
+
+```bash
+python --version
+node --version
+npm --version
+git --version
+```
+
+Each command should print a version number. If `python` is not recognized, try `python3 --version` (macOS / Linux) and use `python3` and `pip3` in place of `python` and `pip` in the steps below.
+
+> **How to open a terminal**
+>
+> - **Windows:** Press the `Windows` key, type `PowerShell`, and press Enter.
+> - **macOS:** Press `Cmd + Space`, type `Terminal`, and press Enter.
+> - **Linux:** Press `Ctrl + Alt + T`.
+
+### Step 2: Download the Project
+
+Choose **one** of the two options.
+
+**Option A — Using Git (recommended):**
+
+```bash
+git clone https://github.com/<your-username>/indicbridge-ir-system.git
+cd indicbridge-ir-system
+```
+
+Replace `<your-username>` with the GitHub username that owns this repository (copy the exact link from the green **Code** button on the repository page).
+
+**Option B — Without Git (download a ZIP):**
+
+1. Open the repository page on GitHub.
+2. Click the green **Code** button, then click **Download ZIP**.
+3. Extract (unzip) the downloaded file.
+4. Open a terminal inside the extracted folder:
+   - **Windows:** Open the folder in File Explorer, click the address bar, type `powershell`, and press Enter.
+   - **macOS / Linux:** Type `cd ` in the terminal, drag the folder into the terminal window, and press Enter.
+
+You should now be inside the project folder, the one that contains `app.py`, `package.json`, and `requirements.txt`. You can confirm this with `ls` (macOS / Linux) or `dir` (Windows).
+
+### Step 3: (Optional) Create a Virtual Environment
+
+A virtual environment keeps this project's Python packages separate from the rest of your computer. It is optional but recommended.
+
+```bash
+# Create the environment
+python -m venv venv
+
+# Activate it (Windows PowerShell)
+venv\Scripts\Activate.ps1
+
+# Activate it (Windows Command Prompt)
+venv\Scripts\activate.bat
+
+# Activate it (macOS / Linux)
+source venv/bin/activate
+```
+
+When it is active, you will see `(venv)` at the start of your terminal line.
+
+> **Windows PowerShell error?** If you see *"running scripts is disabled on this system"*, run this once and try again:
+>
+> ```powershell
+> Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+> ```
+
+### Step 4: Install Dependencies
 
 ```bash
 # Install Python dependencies
@@ -131,7 +240,9 @@ pip install -r requirements.txt
 npm install
 ```
 
-### 2. Configure Environment Variables
+Both commands download packages from the internet and may take a few minutes. Wait until each one finishes and returns to the prompt.
+
+### Step 5: Configure Environment Variables
 
 Copy the example environment file:
 
@@ -147,19 +258,47 @@ Copy-Item .env.example .env
 
 Update `.env` with any required local configuration.
 
-### 3. Run the Backend
+### Step 6: Run the Backend
 
 ```bash
 python app.py
 ```
 
-### 4. Run the Frontend / Development Server
+### Step 7: Run the Frontend / Development Server
+
+Open a **second terminal window** in the same project folder (keep the first one running), then run:
 
 ```bash
 npm run dev
 ```
 
 The exact frontend/backend commands may depend on the configuration in `package.json`.
+
+### Step 8: Open the Application
+
+When `npm run dev` starts, it prints a local address in the terminal (usually something like `http://localhost:3000`). Hold `Ctrl` (or `Cmd` on macOS) and click that link, or copy it into your web browser. Then try a query such as `kal ka mausam`.
+
+To stop the application, click the terminal window and press `Ctrl + C`.
+
+### Troubleshooting
+
+| Problem | Solution |
+| --- | --- |
+| `python` is not recognized | Reinstall Python and tick **"Add python.exe to PATH"**, or use `python3` instead. |
+| `pip` is not recognized | Use `python -m pip install -r requirements.txt` instead. |
+| `npm` is not recognized | Reinstall Node.js (LTS) and restart your terminal. |
+| `pip install` fails with a permission error | Activate the virtual environment from Step 3, or add `--user` to the command. |
+| Port already in use | Close the other program using that port, or stop any earlier run of this project with `Ctrl + C`. |
+| Hindi text looks broken on Windows | Use PowerShell or Windows Terminal, and make sure your terminal font supports Devanagari. |
+| Changes to `.env` are not applied | Stop the running servers with `Ctrl + C` and start them again. |
+
+### Running the Tests (Optional)
+
+To confirm that your installation works correctly:
+
+```bash
+python run_tests.py
+```
 
 ---
 
@@ -179,7 +318,7 @@ Each term maps to a postings list containing:
 
 Conceptually:
 
-$$
+```math
 \mathrm{Postings}(t)
 =
 [
@@ -189,7 +328,7 @@ $$
 [p_1,p_2,\dots,p_n]
 \rangle
 ]
-$$
+```
 
 The positional information allows the system to expose exactly where a query term occurs inside a document.
 
@@ -316,7 +455,7 @@ IndicBridge combines multiple relevance signals:
 
 The final score is:
 
-$$
+```math
 \mathrm{Score}_{\mathrm{final}}(q,d)
 =
 \alpha\cdot\mathrm{Cosine}(q,d)
@@ -326,7 +465,7 @@ $$
 \gamma\cdot\mathrm{Phonetic}(q,d)
 +
 \delta\cdot\mathrm{Exact}(q,d)
-$$
+```
 
 Default parameters are:
 
